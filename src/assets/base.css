@@ -1,0 +1,14 @@
+/* semantic color variables for this project */
+:root {
+  --color-background-1: #f2f2f2;
+  --color-background-2: #ffffff;
+  --color-background-3: #b5bfbf;
+
+  --color-accent-1: #f1de3d;
+  --color-accent-2: #bfd7d1;
+  --color-accent-3: #bfd7d1;
+  --color-accent-error: #d82f2f;
+
+  --color-text-1: #010103;
+  --color-text-2: #333333;
+}
