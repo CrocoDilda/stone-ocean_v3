@@ -1,4 +1,50 @@
-@import './base.css';
+@import "./fonts/fonts.css";
+@import "./style-zero.css";
+
+:root {
+  --color-background-1: #f2f2f2;
+  --color-background-2: #ffffff;
+  --color-background-3: #b5bfbf;
+
+  --color-accent-1: #f1de3d;
+  --color-accent-2: #bfd7d1;
+  --color-accent-3: #bfd7d1;
+  --color-accent-error: #d82f2f;
+
+  --color-text-1: #010103;
+  --color-text-2: #333333;
+  --color-text-3: #ffffff;
+
+  --container: 1440px;
+
+  --title-fonts: "Montserrat", "Roboto", sans-serif;
+  --text-fonts: "";
+}
+
+.container {
+  width: 100vw;
+  padding: 0px calc((100vw - var(--container)) / 2);
+}
+
+@media (max-width: 1540px) {
+  .container {
+    padding: 0px 30px;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    padding: 0px 18px;
+  }
+}
+
+* {
+  &:focus-visible {
+    outline: 3px solid var(--color-accent-1) !important;
+    border-radius: 10px;
+    outline-offset: 3px;
+  }
+}
 
 h1,
 h2,
@@ -6,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-family: "Montserrat", "Roboto", sans-serif;
 }
 
 h1 {

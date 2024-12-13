@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import ButtonControl from "./components/control/ButtonControl.vue";
+import HeaderIterm from "./components/HeaderItem/HeaderIterm.vue";
 </script>
 
 <template>
-  <ButtonControl text="Button" />
+  <div class="app">
+    <HeaderIterm />
+  </div>
 </template>
+
+<style scoped>
+.app {
+  background-color: rgb(175, 240, 240);
+  height: 100vh;
+}
+</style>
