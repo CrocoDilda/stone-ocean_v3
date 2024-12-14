@@ -4,22 +4,29 @@ import IconArrow from "../icons/IconArrow.vue";
 type Props = {
   text: string;
   attribute?: string;
+  url?: string;
 };
 
 defineProps<Props>();
 </script>
 
 <template>
-  <button>
+  <button v-if="!url" class="button">
     <p>
       {{ text }}
     </p>
     <IconArrow v-if="attribute && attribute === 'arrow'" />
   </button>
+  <a v-else class="button" :href="url">
+    <p>
+      {{ text }}
+    </p>
+    <IconArrow v-if="attribute && attribute === 'arrow'" />
+  </a>
 </template>
 
 <style scoped>
-button {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,14 +42,14 @@ button {
 }
 
 @media (hover: hover) {
-  button:hover {
-    background-color: var(--color-text-1);
+  .button:hover {
+    background-color: var(--color-background-5);
     color: var(--color-text-3);
   }
 }
 @media (hover: none) {
-  button:active {
-    background-color: var(--color-text-1);
+  .button:active {
+    background-color: var(--color-background-5);
     color: var(--color-text-3);
   }
 }

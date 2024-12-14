@@ -5,10 +5,11 @@
   --color-background-1: #f2f2f2;
   --color-background-2: #ffffff;
   --color-background-3: #b5bfbf;
+  --color-background-4: #bfd7d1;
+  --color-background-5: #010103;
 
   --color-accent-1: #f1de3d;
-  --color-accent-2: #bfd7d1;
-  --color-accent-3: #bfd7d1;
+  --color-accent-2: #1e0c9e;
   --color-accent-error: #d82f2f;
 
   --color-text-1: #010103;
@@ -26,18 +27,6 @@
   padding: 0px calc((100vw - var(--container)) / 2);
 }
 
-@media (max-width: 1540px) {
-  .container {
-    padding: 0px 30px;
-  }
-}
-
-@media (max-width: 860px) {
-  .container {
-    padding: 0px 18px;
-  }
-}
-
 * {
   &:focus-visible {
     outline: 3px solid var(--color-accent-1) !important;
@@ -51,42 +40,44 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.title {
   font-family: "Montserrat", "Roboto", sans-serif;
+  color: var(--color-text-1);
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 500;
-  color: var(--color-text-1);
 }
 
 h2 {
   font-size: 3rem;
   font-weight: 500;
-  color: var(--color-text-1);
 }
 
 h3 {
   font-size: 3rem;
   font-weight: 500;
-  color: var(--color-text-1);
 }
 
 h4 {
   font-size: 3rem;
-  font-weight: 500;
-  color: var(--color-text-1);
+  font-weight: 400;
 }
 
 h5 {
   font-size: 3rem;
-  font-weight: 500;
-  color: var(--color-text-1);
+  font-weight: 400;
 }
 
 h6 {
   font-size: 3rem;
-  font-weight: 500;
-  color: var(--color-text-1);
+  font-weight: 400;
+}
+
+.text {
+  font-family: "Inter", "Lato", sans-serif;
+  color: var(--color-text-2);
+  font-size: 1.5rem;
 }

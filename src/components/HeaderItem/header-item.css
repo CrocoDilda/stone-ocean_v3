@@ -1,4 +1,5 @@
 .header {
+  position: fixed;
   display: grid;
   grid-auto-flow: column;
   gap: 24px;
@@ -135,6 +136,11 @@
 }
 
 @media (max-width: 660px) {
+  .header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
   .header--logo {
     height: 50px;
   }

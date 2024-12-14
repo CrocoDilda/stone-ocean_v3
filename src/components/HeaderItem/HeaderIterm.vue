@@ -58,7 +58,11 @@ onUnmounted(() => {
           <li><a href="#" class="header--link">Контакты</a></li>
         </ul>
       </nav>
-      <ButtonControl class="header--button" text="Рассчитать стоимость" />
+      <ButtonControl
+        class="header--button"
+        text="Рассчитать стоимость"
+        :url="'/page'"
+      />
     </div>
     <button v-show="!menuIsOpen" @click="toggleMenu" class="header--burger">
       <IconBurger class="header--burger-icon" />
