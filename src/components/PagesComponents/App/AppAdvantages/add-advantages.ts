@@ -1,11 +1,11 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
-const slides = ref<string[]>([
-  new URL("../../../../assets/images/kitchen-1.jpg", import.meta.url).href,
-  new URL("../../../../assets/images/kitchen-2.jpg", import.meta.url).href,
-  new URL("../../../../assets/images/kitchen-3.jpg", import.meta.url).href,
-  new URL("../../../../assets/images/kitchen-4.jpg", import.meta.url).href,
-]);
+import kitchen1 from "@/assets/images/kitchen-1.jpg";
+import kitchen2 from "@/assets/images/kitchen-2.jpg";
+import kitchen3 from "@/assets/images/kitchen-3.jpg";
+import kitchen4 from "@/assets/images/kitchen-4.jpg";
+const slides = ref<string[]>([kitchen1, kitchen2, kitchen3, kitchen4]);
+
 const activeSlide = ref<number>(0);
 const sliderContainer = ref<HTMLDivElement | null>(null);
 const AUTO_SCROLL_TIME = 5000;

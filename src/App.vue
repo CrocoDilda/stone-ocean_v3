@@ -18,8 +18,6 @@ import AppCatalog from "./components/PagesComponents/App/AppCatalog/AppCatalog.v
 
 <style scoped>
 .app {
-  /* background-color: rgb(175, 240, 240); */
-  height: 100vh;
 }
 
 @media (max-width: 660px) {

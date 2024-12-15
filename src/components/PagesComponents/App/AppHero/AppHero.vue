@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import kitchen1 from "@/assets/images/kitchen-1.jpg";
+import kitchen2 from "@/assets/images/kitchen-2.jpg";
+import kitchen3 from "@/assets/images/kitchen-3.jpg";
+const LIST = [kitchen1, kitchen2, kitchen3];
+</script>
 
 <template>
   <section class="container hero">
@@ -11,35 +16,11 @@
         </p>
       </div>
       <ul class="hero--list">
-        <li class="hero--item">
+        <li v-for="(item, index) in LIST" :key="index" class="hero--item">
           <a href="#" class="hero--link">
             <div class="hero--link-inner">
               <img
-                src="@/assets/images/kitchen-1.jpg"
-                alt="Изделие из акрилового камня"
-                class="hero--image"
-              />
-              <div class="title hero--image-button">Посмотреть ещё</div>
-            </div>
-          </a>
-        </li>
-        <li class="hero--item">
-          <a href="#" class="hero--link">
-            <div class="hero--link-inner">
-              <img
-                src="@/assets/images/kitchen-2.jpg"
-                alt="Изделие из акрилового камня"
-                class="hero--image"
-              />
-              <div class="title hero--image-button">Посмотреть ещё</div>
-            </div>
-          </a>
-        </li>
-        <li class="hero--item">
-          <a href="#" class="hero--link">
-            <div class="hero--link-inner">
-              <img
-                src="@/assets/images/kitchen-3.jpg"
+                :src="item"
                 alt="Изделие из акрилового камня"
                 class="hero--image"
               />
