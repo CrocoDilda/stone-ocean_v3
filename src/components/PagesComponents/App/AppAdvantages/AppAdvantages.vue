@@ -25,7 +25,7 @@ const {
       </p>
       <ButtonControl text="Расчитать стоимость" url="/" />
     </div>
-    <div class="slider-container" ref="sliderContainer">
+    <div class="slider--container" ref="sliderContainer">
       <div
         class="slider"
         :style="{ transform: `translateX(-${activeSlide * 100}%)` }"
@@ -34,11 +34,9 @@ const {
         @touchend="onTouchEnd"
       >
         <div v-for="(slide, index) in slides" :key="index" class="slide">
-          {{ slide }}
-          <img
-            :src="`../../../../assets/images/${slide}`"
-            class="slider--image"
-          />
+          <div class="slider--inner">
+            <img :src="`${slide}`" alt="слайд" class="slider--image" />
+          </div>
         </div>
       </div>
       <div class="dots">

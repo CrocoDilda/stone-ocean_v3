@@ -9,7 +9,7 @@ import IconCross from "../icons/IconCross.vue";
 const activeStyle = ref("");
 const menuIsOpen = ref(false);
 const menuIsDisabled = ref(true);
-let timerId = 0;
+let timerId: ReturnType<typeof setTimeout> | undefined;
 
 const toggleMenu = () => {
   clearTimeout(timerId);

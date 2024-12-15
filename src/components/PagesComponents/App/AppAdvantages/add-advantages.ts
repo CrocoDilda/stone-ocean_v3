@@ -1,13 +1,14 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const slides = ref<string[]>([
-  "kitchen-1.jpg",
-  "kitchen-2.jpg",
-  "kitchen-3.jpg",
-  "kitchen-4.jpg",
+  new URL("../../../../assets/images/kitchen-1.jpg", import.meta.url).href,
+  new URL("../../../../assets/images/kitchen-2.jpg", import.meta.url).href,
+  new URL("../../../../assets/images/kitchen-3.jpg", import.meta.url).href,
+  new URL("../../../../assets/images/kitchen-4.jpg", import.meta.url).href,
 ]);
 const activeSlide = ref<number>(0);
 const sliderContainer = ref<HTMLDivElement | null>(null);
+const AUTO_SCROLL_TIME = 5000;
 let autoScrollInterval: ReturnType<typeof setInterval> | null = null;
 
 // Для работы с жестами
@@ -50,7 +51,7 @@ const goToSlide = (index: number): void => {
 const startAutoScroll = (): void => {
   autoScrollInterval = setInterval(() => {
     activeSlide.value = (activeSlide.value + 1) % slides.value.length;
-  }, 2000);
+  }, AUTO_SCROLL_TIME);
 };
 
 const stopAutoScroll = (): void => {

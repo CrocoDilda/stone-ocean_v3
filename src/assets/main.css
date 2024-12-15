@@ -22,6 +22,10 @@
   --text-fonts: "";
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 100vw;
   padding: 0px calc((100vw - var(--container)) / 2);
