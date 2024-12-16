@@ -12,12 +12,34 @@
   align-items: center;
 }
 
+.hero--title {
+  position: relative;
+  animation-name: title;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.hero--subtitle {
+  position: relative;
+  animation-name: subtitle;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
 .hero--list {
   display: grid;
   grid-auto-flow: column;
   gap: 24px;
   align-items: center;
   margin-top: 64px;
+
+  position: relative;
+  animation-name: list;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .hero--link {
@@ -145,5 +167,35 @@
   .hero--image-button {
     top: 80%;
     font-size: 1.25rem;
+  }
+}
+
+@keyframes title {
+  0% {
+    right: 50vw;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes subtitle {
+  0% {
+    left: 50vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes list {
+  0% {
+    top: 80vh;
+  }
+
+  100% {
+    top: 0;
   }
 }

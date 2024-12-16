@@ -1,9 +1,9 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
-import kitchen1 from "@/assets/images/kitchen-1.jpg";
-import kitchen2 from "@/assets/images/kitchen-2.jpg";
-import kitchen3 from "@/assets/images/kitchen-3.jpg";
-import kitchen4 from "@/assets/images/kitchen-4.jpg";
+import kitchen1 from "@/assets/images/kitchen-1.webp";
+import kitchen2 from "@/assets/images/kitchen-2.webp";
+import kitchen3 from "@/assets/images/kitchen-3.webp";
+import kitchen4 from "@/assets/images/kitchen-4.webp";
 const slides = ref<string[]>([kitchen1, kitchen2, kitchen3, kitchen4]);
 
 const activeSlide = ref<number>(0);

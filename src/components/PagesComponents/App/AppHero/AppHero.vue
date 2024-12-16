@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import kitchen1 from "@/assets/images/kitchen-1.jpg";
-import kitchen2 from "@/assets/images/kitchen-2.jpg";
-import kitchen3 from "@/assets/images/kitchen-3.jpg";
+import kitchen1 from "@/assets/images/kitchen-1.webp";
+import kitchen2 from "@/assets/images/kitchen-2.webp";
+import kitchen3 from "@/assets/images/kitchen-3.webp";
 const LIST = [kitchen1, kitchen2, kitchen3];
 </script>
 
@@ -9,7 +9,9 @@ const LIST = [kitchen1, kitchen2, kitchen3];
   <section class="container hero">
     <div class="hero--wrapper">
       <div class="hero--head">
-        <h1>Изделия из акрилового камня для вашего интерьера</h1>
+        <h1 class="hero--title">
+          Изделия из акрилового камня для вашего интерьера
+        </h1>
         <p class="text hero--subtitle">
           Изготавливаем изделия, которые не просто украшают, а делают
           пространство удобным и практичным.
@@ -20,6 +22,7 @@ const LIST = [kitchen1, kitchen2, kitchen3];
           <a href="#" class="hero--link">
             <div class="hero--link-inner">
               <img
+                rel="preload"
                 :src="item"
                 alt="Изделие из акрилового камня"
                 class="hero--image"
