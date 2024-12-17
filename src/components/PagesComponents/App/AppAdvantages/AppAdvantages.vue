@@ -35,7 +35,13 @@ const {
       >
         <div v-for="(slide, index) in slides" :key="index" class="slide">
           <div class="slider--inner">
-            <img :src="`${slide}`" alt="слайд" class="slider--image" />
+            <img
+              loading="lazy"
+              :src="`${slide}`"
+              alt=""
+              class="slider--image"
+            />
+            <div class="images-bg-icon"></div>
           </div>
         </div>
       </div>

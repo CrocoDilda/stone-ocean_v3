@@ -85,3 +85,15 @@ h6 {
   color: var(--color-text-2);
   font-size: 1.5rem;
 }
+
+.images-bg-icon {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  padding: 20px;
+  background: url("@/assets/icons/image.svg") center center no-repeat;
+  background-size: contain;
+  z-index: -1;
+}

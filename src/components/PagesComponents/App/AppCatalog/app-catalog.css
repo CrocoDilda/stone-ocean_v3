@@ -18,7 +18,6 @@
   display: block;
   border-radius: 40px;
   transition: border-radius 0.2s;
-  background-color: var(--color-background-5);
   &:hover .catalog--image {
     filter: blur(2px);
   }
@@ -29,6 +28,9 @@
     opacity: 1;
   }
   &:hover .catalog--image-title {
+    opacity: 0;
+  }
+  &:hover .catalog--filter {
     opacity: 0;
   }
 }
@@ -42,11 +44,28 @@
 }
 
 .catalog--image {
+  position: relative;
   object-fit: cover;
   width: 100%;
   height: 100%;
   transition: filter 0.2s, opacity 0.2s;
-  opacity: 0.6;
+  z-index: 1;
+}
+
+.catalog--filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background-5);
+  opacity: 0.4;
+  z-index: 1;
+  transition: opacity 0.2s;
+}
+
+.catalog--icon {
+  z-index: 0;
 }
 
 .catalog--image-title {
@@ -58,6 +77,7 @@
   font-size: 2.5rem;
   white-space: nowrap;
   transition: opacity 0.2s;
+  z-index: 2;
 }
 
 .catalog--image-button {
@@ -75,6 +95,28 @@
   transition: opacity 0.2s;
   white-space: nowrap;
   transition: 0.2s;
+  z-index: 1;
+}
+
+@media (hover: none) {
+  .catalog--link:hover {
+    & .catalog--image {
+      filter: none;
+    }
+
+    & .catalog--link-inner {
+      border-radius: initial;
+      box-shadow: none;
+    }
+
+    & .catalog--image-button {
+      opacity: initial;
+    }
+
+    & .catalog--filter {
+      opacity: initial;
+    }
+  }
 }
 
 @media (max-width: 1200px) {

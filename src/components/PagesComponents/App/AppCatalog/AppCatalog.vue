@@ -12,19 +12,17 @@ const LIST = [
 </script>
 
 <template>
-  <section class="container catalog">
+  <section class="catalog container">
     <h2>Каталог изделий</h2>
     <ul class="catalog--list">
       <li v-for="(item, index) in LIST" :key="index">
         <a href="#" class="catalog--link">
           <div class="catalog--link-inner">
-            <img
-              :src="item.image"
-              alt="Изделие из акрилового камня"
-              class="catalog--image"
-            />
+            <img loading="lazy" :src="item.image" class="catalog--image" />
             <div class="title catalog--image-button">Посмотреть ещё</div>
             <div class="title catalog--image-title">{{ item.text }}</div>
+            <div class="catalog--filter"></div>
+            <div class="catalog--icon images-bg-icon"></div>
           </div>
         </a>
       </li>

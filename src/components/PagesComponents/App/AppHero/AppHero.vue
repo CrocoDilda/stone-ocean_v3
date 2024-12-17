@@ -21,13 +21,9 @@ const LIST = [kitchen1, kitchen2, kitchen3];
         <li v-for="(item, index) in LIST" :key="index" class="hero--item">
           <a href="#" class="hero--link">
             <div class="hero--link-inner">
-              <img
-                rel="preload"
-                :src="item"
-                alt="Изделие из акрилового камня"
-                class="hero--image"
-              />
+              <img rel="preload" :src="item" alt=" " class="hero--image" />
               <div class="title hero--image-button">Посмотреть ещё</div>
+              <div class="images-bg-icon"></div>
             </div>
           </a>
         </li>

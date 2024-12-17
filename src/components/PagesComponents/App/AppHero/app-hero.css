@@ -13,6 +13,7 @@
 }
 
 .hero--title {
+  transition: opacity 0.2s;
   position: relative;
   animation-name: title;
   animation-duration: 0.7s;
@@ -21,6 +22,7 @@
 }
 
 .hero--subtitle {
+  transition: opacity 0.2s;
   position: relative;
   animation-name: subtitle;
   animation-duration: 0.7s;
@@ -30,10 +32,11 @@
 
 .hero--list {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, minmax(172px, 1fr));
   gap: 24px;
   align-items: center;
   margin-top: 64px;
+  transition: opacity 0.2s;
 
   position: relative;
   animation-name: list;
@@ -88,6 +91,25 @@
   white-space: nowrap;
 }
 
+@media (hover: none) {
+  @media (hover: none) {
+    .hero--link:hover {
+      & .hero--image {
+        filter: none;
+      }
+
+      & .hero--link-inner {
+        border-radius: initial;
+        box-shadow: none;
+      }
+
+      & .hero--image-button {
+        opacity: initial;
+      }
+    }
+  }
+}
+
 @media (max-width: 1250px) {
   .hero--wrapper {
     padding: 80px 40px;
@@ -112,6 +134,7 @@
 
   .hero--subtitle {
     max-width: 70%;
+    transition: opacity 0.2s;
   }
 }
 
@@ -131,7 +154,8 @@
   }
 
   .hero--list {
-    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
     gap: 40px;
     margin-top: 40px;
   }
@@ -172,30 +196,36 @@
 
 @keyframes title {
   0% {
+    opacity: 0;
     right: 50vw;
   }
 
   100% {
+    opacity: 1;
     right: 0;
   }
 }
 
 @keyframes subtitle {
   0% {
+    opacity: 0;
     left: 50vw;
   }
 
   100% {
+    opacity: 1;
     left: 0;
   }
 }
 
 @keyframes list {
   0% {
+    opacity: 0;
     top: 80vh;
   }
 
   100% {
+    opacity: 1;
     top: 0;
   }
 }

@@ -14,6 +14,7 @@ app.use(router);
 
 app.mount("#app");
 
+// Скрываю загрузочную анимацию
 document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.getElementById("loading");
   const app = document.getElementById("app");
