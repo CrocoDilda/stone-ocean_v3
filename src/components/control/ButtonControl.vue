@@ -30,6 +30,7 @@ defineProps<Props>();
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 14px 24px;
   border-radius: 64px;
   background: var(--color-accent-1);

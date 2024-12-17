@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref } from "vue";
 
 import MainLogo from "../icons/MainLogo.vue";
 import ButtonControl from "../control/ButtonControl.vue";
 import IconBurger from "../icons/IconBurger.vue";
 import IconCross from "../icons/IconCross.vue";
+
+import { useScreenStore } from "@/store/screen.ts";
 
 const activeStyle = ref("");
 const menuIsOpen = ref(false);
@@ -24,27 +26,13 @@ const toggleMenu = () => {
     }, 300);
   }
 };
-
-const screenWidth = ref(window.innerWidth);
-
-const updateScreenWidth = () => {
-  screenWidth.value = window.innerWidth;
-};
-
-onMounted(() => {
-  window.addEventListener("resize", updateScreenWidth);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("resize", updateScreenWidth);
-});
 </script>
 
 <template>
   <header class="container header">
     <a href="#" class="header--logo-link"><MainLogo class="header--logo" /></a>
     <div
-      v-show="!menuIsDisabled || screenWidth > 660"
+      v-show="useScreenStore().screenWidth > 660 ? true : !menuIsDisabled"
       :class="`header--menu ${activeStyle}`"
     >
       <button @click="toggleMenu" class="header--cross">

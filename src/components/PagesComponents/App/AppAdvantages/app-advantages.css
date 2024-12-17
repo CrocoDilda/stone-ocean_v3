@@ -65,7 +65,7 @@
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  opacity: 0.5;
+  opacity: 0.3;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.4);
@@ -73,7 +73,7 @@
 }
 
 .dot.active {
-  background-color: var(--color-accent-2);
+  background-color: var(--color-background-4);
   opacity: 0.8;
 }
 
