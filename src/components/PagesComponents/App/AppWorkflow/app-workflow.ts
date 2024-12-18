@@ -31,14 +31,36 @@ const cardContent = [
 ];
 
 // Объект для хранения стилей
+const translatePosition1 = 85;
+const translatePosition2 = 150;
+
+const scalePosition1 = 0.6;
+const scalePosition2 = 0.4;
+
 const cardStylesMap: {
   [key: string]: { transform: string; zIndex: number; opacity: number };
 } = {
-  "-2": { transform: "translateX(-150%) scale(0.4)", zIndex: 1, opacity: 0.6 },
-  "-1": { transform: "translateX(-85%) scale(0.6)", zIndex: 2, opacity: 0.8 },
-  "0": { transform: "translateX(0%) scale(1)", zIndex: 3, opacity: 1 },
-  "1": { transform: "translateX(85%) scale(0.6)", zIndex: 2, opacity: 0.8 },
-  "2": { transform: "translateX(150%) scale(0.4)", zIndex: 1, opacity: 0.6 },
+  "-2": {
+    transform: `translateX(-${translatePosition2}%) scale(${scalePosition2})`,
+    zIndex: 1,
+    opacity: 0.6,
+  },
+  "-1": {
+    transform: `translateX(-${translatePosition1}%) scale(${scalePosition1})`,
+    zIndex: 2,
+    opacity: 0.8,
+  },
+  "0": { transform: `translateX(0%) scale(1)`, zIndex: 3, opacity: 1 },
+  "1": {
+    transform: `translateX(${translatePosition1}%) scale(${scalePosition1})`,
+    zIndex: 2,
+    opacity: 0.8,
+  },
+  "2": {
+    transform: `translateX(${translatePosition2}%) scale(${scalePosition2})`,
+    zIndex: 1,
+    opacity: 0.6,
+  },
 };
 
 export { cardContent, cardStylesMap };

@@ -1,12 +1,21 @@
 .workflow {
   --padding: 80px;
   padding-top: var(--padding);
-  padding-bottom: var(--padding);
 }
 
 .workflow--header {
   display: grid;
+  justify-content: center;
   gap: 36px;
+}
+
+.workflow--title {
+  text-align: center;
+  max-width: 600px;
+}
+
+.workflow--text {
+  text-align: center;
 }
 
 .slider-wrapper {
@@ -36,11 +45,13 @@
 .slider--card {
   position: absolute;
   min-width: 200px;
-  max-width: 500px;
+  max-width: 550px;
   height: 80%;
   display: grid;
+  grid-template-rows: auto 1fr auto;
   justify-content: start;
   padding: 30px;
+  padding-bottom: 20px;
   background: linear-gradient(
     135deg,
     var(--color-background-1),
@@ -58,10 +69,12 @@
 }
 
 .slider--card-text {
+  margin-top: 2.5rem;
 }
 
 .slider--card-image {
   justify-self: end;
+  align-self: end;
 }
 
 .card span {
@@ -119,11 +132,16 @@
 }
 
 @media (max-width: 660px) {
+  .slider {
+    margin-top: 0;
+  }
+
   .slider--list {
     padding: 0 20px;
   }
   .slider--card {
     padding: 20px;
+    height: auto;
   }
 
   .slider--button {

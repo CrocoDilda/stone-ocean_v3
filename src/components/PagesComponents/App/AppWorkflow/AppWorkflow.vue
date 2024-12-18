@@ -47,8 +47,12 @@ const isNextDisabled = computed(
 <template>
   <section class="workflow">
     <div class="workflow--header container">
-      <h2>Пошаговое руководство к идеальному результату</h2>
-      <p class="text">4 простых шага для получения желаемого результата</p>
+      <h2 class="workflow--title">
+        Пошаговое руководство к идеальному результату
+      </h2>
+      <p class="workflow--text text">
+        4 простых шага для получения желаемого результата
+      </p>
     </div>
     <div class="slider-wrapper">
       <div class="slider">
