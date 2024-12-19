@@ -15,19 +15,15 @@
 .hero--title {
   transition: opacity 0.2s;
   position: relative;
+
   animation-name: title;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
 }
 
 .hero--subtitle {
   transition: opacity 0.2s;
   position: relative;
+
   animation-name: subtitle;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
 }
 
 .hero--list {
@@ -40,7 +36,10 @@
 
   position: relative;
   animation-name: list;
-  animation-duration: 0.7s;
+}
+
+.animation {
+  animation-duration: 1.2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }

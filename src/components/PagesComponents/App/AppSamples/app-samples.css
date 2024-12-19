@@ -1,0 +1,56 @@
+.samples {
+  display: grid;
+  gap: 64px;
+  background-color: var(--color-background-1);
+  --padding: 80px;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.samples--title {
+  text-align: center;
+}
+
+.samples--partners {
+  display: grid;
+  justify-content: center;
+  gap: 24px;
+}
+
+.samples--partners-title {
+  text-align: center;
+}
+
+.samples--list-logos {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: start;
+  gap: 36px;
+}
+
+.samples--image-logos {
+  height: 50px;
+  width: auto;
+  object-fit: cover;
+  padding: 10px 20px;
+  background-color: var(--color-background-6);
+  fill: white;
+  border-radius: 20px;
+}
+
+.samples--list-colors {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 300px);
+  gap: 46px;
+  margin-top: 64px;
+}
+
+.samples--item-colors {
+  justify-self: center;
+  height: 100%;
+}
+
+.samples--button {
+  justify-self: center;
+}

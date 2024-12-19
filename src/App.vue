@@ -4,9 +4,10 @@ import { onMounted, onUnmounted } from "vue";
 import HeaderIterm from "./components/HeaderItem/HeaderIterm.vue";
 import AppHero from "./components/PagesComponents/App/AppHero/AppHero.vue";
 import AppAdvantages from "./components/PagesComponents/App/AppAdvantages/AppAdvantages.vue";
-import AppCatalog from "./components/PagesComponents/App/AppCatalog/AppCatalog.vue";
+import AppCatalog from "./components/PagesComponents/App/AppPortfolio/AppPortfolio.vue";
 import AppWorkflow from "./components/PagesComponents/App/AppWorkflow/AppWorkflow.vue";
 import FooterItem from "./components/FooterItem/FooterItem.vue";
+import AppManufacturers from "./components/PagesComponents/App/AppSamples/AppSamples.vue";
 
 import { useScreenStore } from "@/store/screen.ts";
 
@@ -32,6 +33,7 @@ onUnmounted(() => {
       <AppAdvantages />
       <AppCatalog />
       <AppWorkflow />
+      <AppManufacturers />
     </main>
     <keep-alive>
       <FooterItem />

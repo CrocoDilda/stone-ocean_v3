@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ButtonControl from "@/components/control/ButtonControl.vue";
+
 import useSlider from "./add-advantages";
 
 const {
@@ -23,8 +25,13 @@ const {
         стали реальностью. Если вы можете это представить — мы можем это
         создать.
       </p>
-      <ButtonControl text="Расчитать стоимость" url="/" />
     </div>
+    <ButtonControl
+      class="advantages--button"
+      text="Расчитать стоимость"
+      url="/"
+    />
+
     <div class="slider--container" ref="sliderContainer">
       <div
         class="slider"

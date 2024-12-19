@@ -1,7 +1,5 @@
-// store/screen.ts
 import { defineStore } from "pinia";
 
-// Определяем тип для состояния
 interface ScreenState {
   screenWidth: number;
 }

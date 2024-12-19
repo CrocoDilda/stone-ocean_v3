@@ -9,15 +9,15 @@ const LIST = [kitchen1, kitchen2, kitchen3];
   <section class="container hero">
     <div class="hero--wrapper">
       <div class="hero--head">
-        <h1 class="hero--title">
+        <h1 class="hero--title animation">
           Изделия из акрилового камня для вашего интерьера
         </h1>
-        <p class="text hero--subtitle">
+        <p class="text hero--subtitle animation">
           Изготавливаем изделия, которые не просто украшают, а делают
           пространство удобным и практичным.
         </p>
       </div>
-      <ul class="hero--list">
+      <ul class="hero--list animation">
         <li v-for="(item, index) in LIST" :key="index" class="hero--item">
           <a href="#" class="hero--link">
             <div class="hero--link-inner">

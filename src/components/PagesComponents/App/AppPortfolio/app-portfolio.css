@@ -1,11 +1,11 @@
-.catalog {
+.portfolio {
   --padding: 80px;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
-  background-color: var(--color-background-4);
+  background-color: var(--color-background-1);
 }
 
-.catalog--list {
+.portfolio--list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -14,28 +14,28 @@
   margin-top: 64px;
 }
 
-.catalog--link {
+.portfolio--link {
   display: block;
   border-radius: 40px;
   transition: border-radius 0.2s;
-  &:hover .catalog--image {
+  &:hover .portfolio--image {
     filter: blur(2px);
   }
-  &:hover .catalog--image {
+  &:hover .portfolio--image {
     opacity: 1;
   }
-  &:hover .catalog--image-button {
+  &:hover .portfolio--image-button {
     opacity: 1;
   }
-  &:hover .catalog--image-title {
+  &:hover .portfolio--image-title {
     opacity: 0;
   }
-  &:hover .catalog--filter {
+  &:hover .portfolio--filter {
     opacity: 0;
   }
 }
 
-.catalog--link-inner {
+.portfolio--link-inner {
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
@@ -43,7 +43,7 @@
   transition: border-radius 0.2s, box-shadow 0.2s;
 }
 
-.catalog--image {
+.portfolio--image {
   position: relative;
   object-fit: cover;
   width: 100%;
@@ -52,7 +52,7 @@
   z-index: 1;
 }
 
-.catalog--filter {
+.portfolio--filter {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,11 +64,11 @@
   transition: opacity 0.2s;
 }
 
-.catalog--icon {
+.portfolio--icon {
   z-index: 0;
 }
 
-.catalog--image-title {
+.portfolio--image-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -80,7 +80,7 @@
   z-index: 2;
 }
 
-.catalog--image-button {
+.portfolio--image-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -99,56 +99,56 @@
 }
 
 @media (hover: none) {
-  .catalog--link:hover {
-    & .catalog--image {
+  .portfolio--link:hover {
+    & .portfolio--image {
       filter: none;
     }
 
-    & .catalog--link-inner {
+    & .portfolio--link-inner {
       border-radius: initial;
       box-shadow: none;
     }
 
-    & .catalog--image-button {
+    & .portfolio--image-button {
       opacity: initial;
     }
 
-    & .catalog--filter {
+    & .portfolio--filter {
       opacity: initial;
     }
   }
 }
 
 @media (max-width: 1200px) {
-  .catalog--image-title {
+  .portfolio--image-title {
     font-size: 1.875rem;
   }
 }
 
 @media (max-width: 850px) {
-  .catalog--image-title {
+  .portfolio--image-title {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 660px) {
-  .catalog--list {
+  .portfolio--list {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     margin-top: 40px;
   }
 
-  .catalog--image-title {
+  .portfolio--image-title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 500px) {
-  .catalog {
+  .portfolio {
     --padding: 50px;
   }
 
-  .catalog--image-title {
+  .portfolio--image-title {
     font-size: 1.5rem;
   }
 }

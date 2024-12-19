@@ -12,17 +12,17 @@ const LIST = [
 </script>
 
 <template>
-  <section class="catalog container">
-    <h2>Каталог изделий</h2>
-    <ul class="catalog--list">
+  <section class="portfolio container">
+    <h2>Наши работы</h2>
+    <ul class="portfolio--list">
       <li v-for="(item, index) in LIST" :key="index">
-        <a href="#" class="catalog--link">
-          <div class="catalog--link-inner">
-            <img loading="lazy" :src="item.image" class="catalog--image" />
-            <div class="title catalog--image-button">Посмотреть ещё</div>
-            <div class="title catalog--image-title">{{ item.text }}</div>
-            <div class="catalog--filter"></div>
-            <div class="catalog--icon images-bg-icon"></div>
+        <a href="#" class="portfolio--link">
+          <div class="portfolio--link-inner">
+            <img loading="lazy" :src="item.image" class="portfolio--image" />
+            <div class="title portfolio--image-button">Посмотреть ещё</div>
+            <div class="title portfolio--image-title">{{ item.text }}</div>
+            <div class="portfolio--filter"></div>
+            <div class="portfolio--icon images-bg-icon"></div>
           </div>
         </a>
       </li>
@@ -31,5 +31,5 @@ const LIST = [
 </template>
 
 <style scoped>
-@import "./app-catalog.css";
+@import "./app-portfolio.css";
 </style>

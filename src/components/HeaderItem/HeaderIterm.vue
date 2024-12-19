@@ -40,8 +40,8 @@ const toggleMenu = () => {
       </button>
       <nav>
         <ul class="header--list">
+          <li><a href="#" class="header--link">Портфолио</a></li>
           <li><a href="#" class="header--link">Каталог</a></li>
-          <li><a href="#" class="header--link">Образцы</a></li>
           <li><a href="#" class="header--link">Вопросы</a></li>
           <li><a href="#" class="header--link">Контакты</a></li>
         </ul>

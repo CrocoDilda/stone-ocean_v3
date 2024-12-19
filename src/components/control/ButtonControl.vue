@@ -21,7 +21,10 @@ defineProps<Props>();
     <p>
       {{ text }}
     </p>
-    <IconArrow v-if="attribute && attribute === 'arrow'" />
+    <IconArrow
+      class="button--arrow"
+      v-if="attribute && attribute === 'arrow'"
+    />
   </a>
 </template>
 
@@ -30,6 +33,7 @@ defineProps<Props>();
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 14px;
   text-align: center;
   padding: 14px 24px;
   border-radius: 64px;
@@ -42,10 +46,18 @@ defineProps<Props>();
   transition: color 0.2s, background-color 0.2s;
 }
 
+.button--arrow {
+  height: 24px;
+  width: 24px;
+}
+
 @media (hover: hover) {
   .button:hover {
     background-color: var(--color-background-5);
     color: var(--color-text-3);
+    & .button--arrow {
+      fill: var(--color-text-3);
+    }
   }
 }
 @media (hover: none) {
