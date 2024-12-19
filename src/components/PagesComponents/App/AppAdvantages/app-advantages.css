@@ -46,9 +46,11 @@
 }
 
 .slider--image {
+  position: relative;
   width: 100%;
   object-fit: cover;
   aspect-ratio: 16 / 10.5;
+  z-index: 1;
 }
 
 .dots {
@@ -80,7 +82,7 @@
 }
 
 .dot.active {
-  background-color: var(--color-background-4);
+  background-color: var(--color-text-2);
   opacity: 0.8;
 }
 

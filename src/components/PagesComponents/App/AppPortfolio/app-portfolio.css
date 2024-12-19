@@ -64,10 +64,6 @@
   transition: opacity 0.2s;
 }
 
-.portfolio--icon {
-  z-index: 0;
-}
-
 .portfolio--image-title {
   position: absolute;
   top: 50%;

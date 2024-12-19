@@ -8,6 +8,7 @@
   --color-background-4: #bfd7d1;
   --color-background-5: #010103;
   --color-background-6: #33333379;
+  --color-background-7: #333333;
 
   --color-accent-1: #f1de3d;
   --color-accent-2: #1e0c9e;
@@ -68,7 +69,7 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h5 {
@@ -96,5 +97,5 @@ h6 {
   padding: 20px;
   background: url("@/assets/icons/image.svg") center center no-repeat;
   background-size: contain;
-  z-index: -1;
+  z-index: 0;
 }

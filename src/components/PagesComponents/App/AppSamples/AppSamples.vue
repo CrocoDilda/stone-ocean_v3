@@ -7,7 +7,6 @@ import { SAMPLES } from "./app-samples";
 import { useManufacturersStore } from "@/store/manufacturers.ts";
 
 const { manufacturers } = useManufacturersStore();
-console.log(manufacturers);
 </script>
 
 <template>
@@ -18,10 +17,12 @@ console.log(manufacturers);
       <ul class="samples--list-logos">
         <li
           v-for="(item, index) in manufacturers"
+          class="samples--item-logo"
           :key="index"
-          class="samples--item-logos"
         >
-          <img class="samples--image-logos" :src="item" alt="" />
+          <a href="#" class="samples--item-logo-link">
+            <img class="samples--image-logos" :src="item" alt=" " />
+          </a>
         </li>
       </ul>
     </div>

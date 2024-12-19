@@ -53,7 +53,7 @@ defineProps<Props>();
 
 @media (hover: hover) {
   .button:hover {
-    background-color: var(--color-background-5);
+    background-color: var(--color-background-7);
     color: var(--color-text-3);
     & .button--arrow {
       fill: var(--color-text-3);

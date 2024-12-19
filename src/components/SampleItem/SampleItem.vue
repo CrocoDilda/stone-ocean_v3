@@ -32,6 +32,7 @@ const imageUrl = new URL(
           class="sample--logo"
         />
       </div>
+      <div class="images-bg-icon"></div>
     </button>
   </li>
 </template>

@@ -105,6 +105,20 @@
   background-color: var(--color-accent-1);
   z-index: 3;
   transition: opacity 0.2s, background-color 0.2s;
+  &:hover {
+    background-color: var(--color-background-7);
+    & .slider--button-icon {
+      fill: var(--color-background-1);
+    }
+  }
+  &:disabled {
+    background-color: #bdbdbd;
+    opacity: 0.5;
+    cursor: default;
+    &:hover .slider--button-icon {
+      fill: var(--color-text-2);
+    }
+  }
 }
 
 .button-left {
@@ -123,15 +137,20 @@
   fill: var(--color-text-2);
 }
 
-.slider--button:disabled {
-  background-color: #bdbdbd;
-  opacity: 0.5;
-  cursor: default;
-}
-
 .slider-buttons button:hover:not(:disabled) {
   background-color: #1565c0;
   transform: scale(1.1);
+}
+
+@media (hover: none) {
+  .slider--button {
+    &:hover {
+      background-color: var(--color-accent-1);
+      & .slider--button-icon {
+        fill: var(--color-text-2);
+      }
+    }
+  }
 }
 
 @media (max-width: 1200px) {

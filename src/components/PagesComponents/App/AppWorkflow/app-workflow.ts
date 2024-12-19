@@ -1,4 +1,4 @@
-import icon1 from "@/assets/icons/contact-us.svg";
+import icon1 from "@/assets/icons/contact.svg";
 import icon2 from "@/assets/icons/installation.svg";
 import icon3 from "@/assets/icons/manufacturing.svg";
 import icon4 from "@/assets/icons/measure.svg";

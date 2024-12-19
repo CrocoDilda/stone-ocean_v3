@@ -22,7 +22,7 @@ const LIST = [
             <div class="title portfolio--image-button">Посмотреть ещё</div>
             <div class="title portfolio--image-title">{{ item.text }}</div>
             <div class="portfolio--filter"></div>
-            <div class="portfolio--icon images-bg-icon"></div>
+            <div class="images-bg-icon"></div>
           </div>
         </a>
       </li>
