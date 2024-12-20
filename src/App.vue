@@ -6,8 +6,9 @@ import AppHero from "./components/PagesComponents/App/AppHero/AppHero.vue";
 import AppAdvantages from "./components/PagesComponents/App/AppAdvantages/AppAdvantages.vue";
 import AppCatalog from "./components/PagesComponents/App/AppPortfolio/AppPortfolio.vue";
 import AppWorkflow from "./components/PagesComponents/App/AppWorkflow/AppWorkflow.vue";
-import FooterItem from "./components/FooterItem/FooterItem.vue";
 import AppSamples from "./components/PagesComponents/App/AppSamples/AppSamples.vue";
+import AppReviews from "./components/PagesComponents/App/AppReviews/AppReviews.vue";
+import FooterItem from "./components/FooterItem/FooterItem.vue";
 
 import { useScreenStore } from "@/store/screen.ts";
 
@@ -34,6 +35,7 @@ onUnmounted(() => {
       <AppCatalog />
       <AppWorkflow />
       <AppSamples />
+      <AppReviews />
     </main>
     <keep-alive>
       <FooterItem />

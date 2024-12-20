@@ -15,7 +15,10 @@ defineProps<Props>();
     <p>
       {{ text }}
     </p>
-    <IconArrow v-if="attribute && attribute === 'arrow'" />
+    <IconArrow
+      class="button--arrow"
+      v-if="attribute && attribute === 'arrow'"
+    />
   </button>
   <a v-else class="button" :href="url">
     <p>
