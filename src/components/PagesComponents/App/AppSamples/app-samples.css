@@ -144,11 +144,6 @@
   }
 
   .samples--list-colors {
-    grid-template-rows: repeat(4, auto);
-    gap: 32px 16px;
-  }
-
-  .samples--item-colors:nth-child(2n) {
-    display: none;
+    gap: 32px 12px;
   }
 }

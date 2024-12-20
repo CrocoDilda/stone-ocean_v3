@@ -95,20 +95,19 @@
 }
 
 @media (hover: none) {
-  @media (hover: none) {
-    .hero--link:hover {
-      & .hero--image {
-        filter: none;
-      }
+  .hero--link:hover {
+    & .hero--image {
+      filter: none;
+    }
 
-      & .hero--link-inner {
-        border-radius: initial;
-        box-shadow: none;
-      }
+    & .hero--link-inner {
+      border-radius: 40px;
+      box-shadow: none;
+      transform: none;
+    }
 
-      & .hero--image-button {
-        opacity: initial;
-      }
+    & .hero--image-button {
+      opacity: 1;
     }
   }
 }

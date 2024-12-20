@@ -20,7 +20,7 @@ const LIST = [
           <div class="portfolio--link-inner">
             <img loading="lazy" :src="item.image" class="portfolio--image" />
             <div class="title portfolio--image-button">Посмотреть ещё</div>
-            <div class="title portfolio--image-title">{{ item.text }}</div>
+            <h4 class="portfolio--image-title title">{{ item.text }}</h4>
             <div class="portfolio--filter"></div>
             <div class="images-bg-icon"></div>
           </div>

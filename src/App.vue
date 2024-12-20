@@ -7,7 +7,7 @@ import AppAdvantages from "./components/PagesComponents/App/AppAdvantages/AppAdv
 import AppCatalog from "./components/PagesComponents/App/AppPortfolio/AppPortfolio.vue";
 import AppWorkflow from "./components/PagesComponents/App/AppWorkflow/AppWorkflow.vue";
 import FooterItem from "./components/FooterItem/FooterItem.vue";
-import AppManufacturers from "./components/PagesComponents/App/AppSamples/AppSamples.vue";
+import AppSamples from "./components/PagesComponents/App/AppSamples/AppSamples.vue";
 
 import { useScreenStore } from "@/store/screen.ts";
 
@@ -33,7 +33,7 @@ onUnmounted(() => {
       <AppAdvantages />
       <AppCatalog />
       <AppWorkflow />
-      <AppManufacturers />
+      <AppSamples />
     </main>
     <keep-alive>
       <FooterItem />

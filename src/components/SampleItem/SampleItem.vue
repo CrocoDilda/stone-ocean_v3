@@ -27,6 +27,7 @@ const imageUrl = new URL(
         <h4 class="sample--title">{{ name }}</h4>
         <p class="sample--text text">{{ id }}</p>
         <img
+          loading="lazy"
           :src="manufacturers[partner]"
           :alt="partner"
           class="sample--logo"
