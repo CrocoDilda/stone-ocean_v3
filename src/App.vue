@@ -8,6 +8,7 @@ import AppCatalog from "./components/PagesComponents/App/AppPortfolio/AppPortfol
 import AppWorkflow from "./components/PagesComponents/App/AppWorkflow/AppWorkflow.vue";
 import AppSamples from "./components/PagesComponents/App/AppSamples/AppSamples.vue";
 import AppReviews from "./components/PagesComponents/App/AppReviews/AppReviews.vue";
+import AppCalculator from "./components/PagesComponents/App/AppCalculator.vue";
 import FooterItem from "./components/FooterItem/FooterItem.vue";
 
 import { useScreenStore } from "@/store/screen.ts";
@@ -36,6 +37,7 @@ onUnmounted(() => {
       <AppWorkflow />
       <AppSamples />
       <AppReviews />
+      <AppCalculator />
     </main>
     <keep-alive>
       <FooterItem />
@@ -44,9 +46,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.app {
-}
-
 @media (max-width: 660px) {
   .app-header {
     background-color: var(--color-background-4);
