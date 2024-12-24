@@ -1,0 +1,71 @@
+.question {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.question--button {
+  width: 100%;
+  text-align: start;
+  background-color: transparent;
+  border: 2px solid var(--color-background-4);
+  overflow: hidden; /* Гарантирует, что содержимое останется внутри кнопки */
+  padding: 16px 40px;
+  border-radius: 64px;
+  transition: border-color 0.3s ease, padding 0.3s ease;
+}
+
+.question--button.active {
+  border-color: var(--color-accent-2);
+}
+
+.question--header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.question--title {
+  margin: 0;
+}
+
+.question--icon {
+  --size: 32px;
+  height: var(--size);
+  width: var(--size);
+  transition: transform 0.3s ease;
+}
+
+.question--text-wrapper {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  max-height: 0; /* Изначально скрыто */
+}
+
+.question--text {
+  padding-top: 16px;
+  color: var(--color-text-secondary);
+}
+
+.question--content-wrapper {
+  overflow: hidden; /* Не позволяет содержимому выходить за границы */
+  transition: max-height 0.4s ease;
+  max-height: 0; /* Изначально скрыто */
+}
+
+@media (max-width: 660px) {
+  .question--icon {
+    --size: 24px;
+  }
+
+  .question--button {
+    padding: 12px 20px;
+  }
+
+  .active {
+    padding: 30px 20px;
+  }
+}
