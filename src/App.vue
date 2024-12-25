@@ -9,7 +9,7 @@ import AppWorkflow from "./components/PagesComponents/App/AppWorkflow/AppWorkflo
 import AppSamples from "./components/PagesComponents/App/AppSamples/AppSamples.vue";
 import AppReviews from "./components/PagesComponents/App/AppReviews/AppReviews.vue";
 import AppCalculator from "./components/PagesComponents/App/AppCalculator.vue";
-import AppQuestions from "./components/QuestionsList/QuestionsList.vue";
+import QuestionsList from "./components/QuestionsList/QuestionsList.vue";
 import FooterItem from "./components/FooterItem/FooterItem.vue";
 
 import { useScreenStore } from "@/store/screen.ts";
@@ -49,7 +49,7 @@ onUnmounted(() => {
       <AppSamples />
       <AppReviews />
       <AppCalculator />
-      <AppQuestions />
+      <QuestionsList />
     </main>
     <keep-alive>
       <FooterItem />
