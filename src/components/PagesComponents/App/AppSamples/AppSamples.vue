@@ -20,7 +20,12 @@ const { manufacturers } = useManufacturersStore();
           class="samples--item-logo"
           :key="index"
         >
-          <a href="#" class="samples--item-logo-link">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="#"
+            class="samples--item-logo-link"
+          >
             <img class="samples--image-logos" :src="item" alt=" " />
           </a>
         </li>

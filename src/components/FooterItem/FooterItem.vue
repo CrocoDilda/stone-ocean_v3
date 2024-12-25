@@ -10,35 +10,64 @@ import IconGithub from "../icons/IconGithub.vue";
 <template>
   <footer class="footer container">
     <div class="footer--header">
-      <a href="#" class="footer--link">
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="#"
+        class="footer--link"
+      >
         <MainLogo class="footer--logo" />
       </a>
       <div class="footer--contacts">
-        <a href="#" class="footer--contacts-link">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="#"
+          class="footer--contacts-link"
+        >
           <IcontCall class="footer--contacts-icon" />
         </a>
-        <a href="#" class="footer--contacts-link">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="#"
+          class="footer--contacts-link"
+        >
           <IconTg class="footer--contacts-icon" />
         </a>
-        <a href="#" class="footer--contacts-link">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="#"
+          class="footer--contacts-link"
+        >
           <IconVk class="footer--contacts-icon" />
         </a>
-        <a href="#" class="footer--contacts-link">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="#"
+          class="footer--contacts-link"
+        >
           <IconWhatsapp class="footer--contacts-icon" />
         </a>
       </div>
     </div>
     <div class="author">
       <p class="author--text text">
-        Разработка и поддержка <span class="author--acent">CrocoDilda</span>
+        Разработка и поддержка: <span class="author--acent">CrocoDilda</span>
       </p>
       <a
-        href="https://t.me/Cr0coDilda"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://github.com/CrocoDilda"
         class="footer--contacts-link author--link"
       >
         <IconGithub class="footer--contacts-icon" />
       </a>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         href="https://t.me/Cr0coDilda"
         class="footer--contacts-link author--link"
       >

@@ -16,7 +16,12 @@ const LIST = [
     <h2>Наши работы</h2>
     <ul class="portfolio--list">
       <li v-for="(item, index) in LIST" :key="index">
-        <a href="#" class="portfolio--link">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="#"
+          class="portfolio--link"
+        >
           <div class="portfolio--link-inner">
             <img loading="lazy" :src="item.image" class="portfolio--image" />
             <div class="title portfolio--image-button">Посмотреть ещё</div>

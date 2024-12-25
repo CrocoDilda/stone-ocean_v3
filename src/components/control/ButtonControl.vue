@@ -21,7 +21,13 @@ defineProps<Props>();
       v-if="attribute && attribute === 'arrow'"
     />
   </button>
-  <a v-else :class="`button ${isBlue ? 'button--blue' : ''}`" :href="url">
+  <a
+    rel="noopener noreferrer"
+    target="_blank"
+    v-else
+    :class="`button ${isBlue ? 'button--blue' : ''}`"
+    :href="url"
+  >
     <p class="button--text">
       {{ text }}
     </p>

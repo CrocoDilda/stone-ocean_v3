@@ -19,7 +19,12 @@ const LIST = [kitchen1, kitchen2, kitchen3];
       </div>
       <ul class="hero--list animation">
         <li v-for="(item, index) in LIST" :key="index" class="hero--item">
-          <a href="#" class="hero--link">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="#"
+            class="hero--link"
+          >
             <div class="hero--link-inner">
               <img rel="preload" :src="item" alt=" " class="hero--image" />
               <div class="title hero--image-button">Посмотреть ещё</div>
