@@ -16,12 +16,23 @@ import { useScreenStore } from "@/store/screen.ts";
 
 const { updateScreenWidth } = useScreenStore();
 
+let resizeObserver: ResizeObserver | null = null;
+
 onMounted(() => {
-  window.addEventListener("resize", updateScreenWidth);
+  resizeObserver = new ResizeObserver((entries) => {
+    const { width } = entries[0].contentRect;
+    updateScreenWidth(width);
+  });
+
+  // Начинаем отслеживать document.body
+  resizeObserver.observe(document.body);
 });
 
 onUnmounted(() => {
-  window.addEventListener("resize", updateScreenWidth);
+  // Останавливаем отслеживание при размонтировании
+  if (resizeObserver) {
+    resizeObserver.unobserve(document.body);
+  }
 });
 </script>
 

@@ -5,10 +5,13 @@ import IconArrow2 from "../icons/IconArrow2.vue";
 type Props = {
   question: string;
   answer: string;
+  id: number;
+  fullList?: boolean;
 };
 
-defineProps<Props>();
+const props = defineProps<Props>();
 
+const isVisible = computed(() => props.id < 6 || props.fullList);
 const isOpen = ref(false); // Управление состоянием раскрытия
 const contentRef = ref<HTMLDivElement | null>(null); // Ссылка на обёртку контента
 
@@ -25,12 +28,13 @@ const toggle = async () => {
 </script>
 
 <template>
-  <li class="question">
+  <li class="question" :class="{ hidden: !isVisible }">
     <button
       class="question--button"
-      :class="{ active: isOpen }"
+      :class="{ active: isOpen, hidden: !isVisible }"
       @click="toggle"
       :aria-expanded="isOpen"
+      :tabindex="isVisible ? 0 : -1"
     >
       <div class="question--header">
         <h5 class="question--title">{{ question }}</h5>

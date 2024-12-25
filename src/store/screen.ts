@@ -9,8 +9,8 @@ export const useScreenStore = defineStore("screen", {
     screenWidth: <number>window.innerWidth,
   }),
   actions: {
-    updateScreenWidth() {
-      this.screenWidth = window.innerWidth;
+    updateScreenWidth(width: number) {
+      this.screenWidth = width;
     },
   },
 });

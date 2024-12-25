@@ -6,17 +6,17 @@ import ButtonControl from "@/components/control/ButtonControl.vue";
 
 import { questions } from "./app-questions";
 
-const isOpen = ref(false);
+const fullList = ref(false);
 const buttonText = ref("Посмотреть больше вопросов");
 
 const showMore = () => {
-  isOpen.value = !isOpen.value;
-  buttonText.value = isOpen.value ? "Скрыть" : "Посмотреть больше вопросов";
+  fullList.value = !fullList.value;
+  buttonText.value = fullList.value ? "Скрыть" : "Посмотреть больше вопросов";
 };
 </script>
 
 <template>
-  <section class="questions container" :class="{ show: isOpen }">
+  <section class="questions container" :class="{ show: fullList }">
     <h2>Часто задаваемые вопросы</h2>
     <ul class="questions--list">
       <QuestionItem
@@ -24,6 +24,8 @@ const showMore = () => {
         :key="question.id"
         :question="question.question"
         :answer="question.answer"
+        :id="question.id"
+        :fullList="fullList"
         class="questions--item"
       />
     </ul>
@@ -50,20 +52,19 @@ const showMore = () => {
   position: relative;
   margin-top: 16px;
   transition: margin-top 0.5s, height 0.5s;
+  transition: 1s;
 }
 
 .questions--item:nth-child(n + 6) {
   z-index: -10;
-  height: 0px;
+  padding: 0;
   margin-top: 0px;
-  opacity: 0;
+  overflow: hidden;
 }
 
 .show .questions--item:nth-child(n + 6) {
-  height: auto;
   z-index: 1;
   margin-top: 16px;
-  opacity: 1;
 }
 
 .questions--button {
