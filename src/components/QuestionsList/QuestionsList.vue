@@ -4,7 +4,7 @@ import { ref } from "vue";
 import QuestionItem from "@/components/QuestionItem/QuestionItem.vue";
 import ButtonControl from "@/components/control/ButtonControl.vue";
 
-import { questions } from "./app-questions";
+import { questions } from "./questions-list";
 
 const fullList = ref(false);
 const buttonText = ref("Посмотреть больше вопросов");
@@ -51,7 +51,7 @@ const showMore = () => {
 .questions--item {
   position: relative;
   margin-top: 16px;
-  transition: margin-top 0.5s, height 0.5s;
+  transition: margin-top 0.5s, height 0.5s, opacity 0.5s;
   transition: 1s;
 }
 
@@ -59,12 +59,14 @@ const showMore = () => {
   z-index: -10;
   padding: 0;
   margin-top: 0px;
+  opacity: 0;
   overflow: hidden;
 }
 
 .show .questions--item:nth-child(n + 6) {
   z-index: 1;
   margin-top: 16px;
+  opacity: 1;
 }
 
 .questions--button {
