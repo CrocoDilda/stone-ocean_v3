@@ -47,9 +47,9 @@ const isNextDisabled = computed(
 <template>
   <section class="workflow">
     <div class="workflow--header container">
-      <h2 class="workflow--title">
+      <h3 class="workflow--title">
         Пошаговое руководство к идеальному результату
-      </h2>
+      </h3>
       <p class="workflow--text text">
         4 простых шага для получения желаемого результата
       </p>

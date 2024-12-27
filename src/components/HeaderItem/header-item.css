@@ -11,6 +11,12 @@
   align-items: center;
   z-index: 8;
   background-color: var(--color-background-2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
 .header--logo-link {

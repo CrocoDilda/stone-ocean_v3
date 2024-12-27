@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 import MainLogo from "../icons/MainLogo.vue";
 import ButtonControl from "../control/ButtonControl.vue";
@@ -11,6 +11,10 @@ import { useScreenStore } from "@/store/screen.ts";
 const activeStyle = ref("");
 const menuIsOpen = ref(false);
 const menuIsDisabled = ref(true);
+const headerVisible = ref(true); // Видимость заголовка
+let lastScrollY = 0; // Последняя позиция прокрутки
+
+// Таймер для плавной анимации меню
 let timerId: ReturnType<typeof setTimeout> | undefined;
 
 const toggleMenu = () => {
@@ -26,10 +30,34 @@ const toggleMenu = () => {
     }, 300);
   }
 };
+
+// Обработчик прокрутки
+const handleScroll = () => {
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    // Прокрутка вниз
+    headerVisible.value = false;
+  } else {
+    // Прокрутка вверх
+    headerVisible.value = true;
+  }
+  lastScrollY = currentScrollY;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <header class="container header">
+  <header
+    class="container header"
+    :class="{ 'header--hidden': !headerVisible }"
+  >
     <a
       rel="noopener noreferrer"
       target="_blank"

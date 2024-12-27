@@ -162,19 +162,19 @@
 @media (max-width: 660px) {
   .slider {
     margin-top: 0;
+    padding: 0 40px;
   }
 
-  .slider--list {
-    padding: 0 20px;
-  }
   .slider--card {
     padding: 20px;
     height: auto;
+    max-width: auto;
+    width: 100%;
   }
 
   .slider--button {
     --button-size: 40px;
-    top: 92%;
+    top: 88%;
   }
 
   .button-left {
@@ -186,7 +186,22 @@
   }
 }
 
+@media (max-width: 550px) {
+  .slider {
+    padding: 0px 25px;
+    height: 630px;
+  }
+
+  .slider--button {
+    --button-size: 40px;
+    top: 92%;
+  }
+}
+
 @media (max-width: 430px) {
+  .slider {
+    padding: 0px 16px;
+  }
   .slider--card-text {
     font-size: 1.25rem;
   }
