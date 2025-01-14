@@ -17,22 +17,41 @@ import { useScreenStore } from "@/store/screen.ts";
 const { updateScreenWidth } = useScreenStore();
 
 let resizeObserver: ResizeObserver | null = null;
+let intersectionObserver: IntersectionObserver | null = null;
 
 onMounted(() => {
+  // Отслеживание изменения ширины экрана
   resizeObserver = new ResizeObserver((entries) => {
     const { width } = entries[0].contentRect;
     updateScreenWidth(width);
   });
-
-  // Начинаем отслеживать document.body
   resizeObserver.observe(document.body);
+
+  intersectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Добавляем класс видимости
+          intersectionObserver?.unobserve(entry.target); // Останавливаем отслеживание
+        }
+      });
+    },
+    {
+      threshold: 0.25, // Регулировка видимости элемента
+    }
+  );
+
+  // Находим все элементы с классом "observable" и начинаем их отслеживать
+  const observableElements = document.querySelectorAll(".observable");
+  observableElements.forEach((el) => intersectionObserver?.observe(el));
 });
 
 onUnmounted(() => {
-  // Останавливаем отслеживание при размонтировании
-  if (resizeObserver) {
-    resizeObserver.unobserve(document.body);
-  }
+  // Очистка наблюдателей
+  resizeObserver?.unobserve(document.body);
+  resizeObserver = null;
+  intersectionObserver?.disconnect();
+  intersectionObserver = null;
 });
 </script>
 
@@ -43,13 +62,13 @@ onUnmounted(() => {
     </keep-alive>
     <main>
       <AppHero />
-      <AppAdvantages />
-      <AppCatalog />
-      <AppWorkflow />
-      <AppSamples />
-      <AppReviews />
-      <AppCalculator />
-      <QuestionsList />
+      <AppAdvantages class="observable" />
+      <AppCatalog class="observable" />
+      <AppWorkflow class="observable" />
+      <AppSamples class="observable" />
+      <AppReviews class="observable" />
+      <AppCalculator class="observable" />
+      <QuestionsList class="observable" />
     </main>
     <keep-alive>
       <FooterItem />
@@ -58,6 +77,17 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.observable {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.observable.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 660px) {
   .app-header {
     background-color: var(--color-background-4);
