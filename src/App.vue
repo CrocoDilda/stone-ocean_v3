@@ -6,6 +6,7 @@ import AppHero from "./components/PagesComponents/App/AppHero/AppHero.vue";
 import AppAdvantages from "./components/PagesComponents/App/AppAdvantages/AppAdvantages.vue";
 import AppCatalog from "./components/PagesComponents/App/AppPortfolio/AppPortfolio.vue";
 import AppWorkflow from "./components/PagesComponents/App/AppWorkflow/AppWorkflow.vue";
+import AppContacts from "./components/PagesComponents/App/AppContacts/AppContacts.vue";
 import AppSamples from "./components/PagesComponents/App/AppSamples/AppSamples.vue";
 import AppReviews from "./components/PagesComponents/App/AppReviews/AppReviews.vue";
 import AppCalculator from "./components/PagesComponents/App/AppCalculator.vue";
@@ -57,18 +58,19 @@ onUnmounted(() => {
 
 <template>
   <div class="app">
-    <keep-alive>
+    <!-- <keep-alive>
       <HeaderIterm class="app-header" />
-    </keep-alive>
+    </keep-alive> -->
     <main>
-      <AppHero />
+      <AppHero class="hero" />
       <AppAdvantages class="observable" />
-      <AppCatalog class="observable" />
+      <!-- <AppCatalog class="observable" /> -->
       <AppWorkflow class="observable" />
-      <AppSamples class="observable" />
-      <AppReviews class="observable" />
-      <AppCalculator class="observable" />
-      <QuestionsList class="observable" />
+      <AppContacts class="observable" />
+      <!-- <AppSamples class="observable" /> -->
+      <!-- <AppReviews class="observable" /> -->
+      <!-- <AppCalculator class="observable" /> -->
+      <QuestionsList class="observable observable-questions" />
     </main>
     <keep-alive>
       <FooterItem />
@@ -77,10 +79,18 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.hero {
+  margin-top: 120px;
+}
+
 .observable {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.observable-questions {
+  opacity: 1;
 }
 
 .observable.visible {

@@ -2,8 +2,8 @@
 import MainLogo from "../icons/MainLogo.vue";
 import IconTg from "../icons/IconTg.vue";
 import IconWhatsapp from "../icons/IconWhatsapp.vue";
-import IconVk from "../icons/IconVk.vue";
-import IcontCall from "../icons/IcontCall.vue";
+import IconMail from "../icons/IconMail.vue";
+import IcontCall from "../icons/IconCall.vue";
 import IconGithub from "../icons/IconGithub.vue";
 </script>
 
@@ -22,7 +22,7 @@ import IconGithub from "../icons/IconGithub.vue";
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="#"
+          href="tel:+79892619556"
           class="footer--contacts-link"
         >
           <IcontCall class="footer--contacts-icon" />
@@ -30,7 +30,7 @@ import IconGithub from "../icons/IconGithub.vue";
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="#"
+          href="https://t.me/Roman_acryl"
           class="footer--contacts-link"
         >
           <IconTg class="footer--contacts-icon" />
@@ -38,15 +38,15 @@ import IconGithub from "../icons/IconGithub.vue";
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="#"
+          href="mailto:stone-ocean-acrylic@yandex.ru"
           class="footer--contacts-link"
         >
-          <IconVk class="footer--contacts-icon" />
+          <IconMail class="footer--contacts-icon" />
         </a>
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="#"
+          href="https://wa.me/+79892619556"
           class="footer--contacts-link"
         >
           <IconWhatsapp class="footer--contacts-icon" />
