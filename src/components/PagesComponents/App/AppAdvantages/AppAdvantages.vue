@@ -26,11 +26,11 @@ const {
         создать.
       </p>
     </div>
-    <ButtonControl
+    <!-- <ButtonControl
       class="advantages--button"
       text="Расчитать стоимость"
       url="/"
-    />
+    /> -->
 
     <div class="slider--container" ref="sliderContainer">
       <div

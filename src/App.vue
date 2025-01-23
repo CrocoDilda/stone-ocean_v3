@@ -58,9 +58,9 @@ onUnmounted(() => {
 
 <template>
   <div class="app">
-    <!-- <keep-alive>
+    <keep-alive>
       <HeaderIterm class="app-header" />
-    </keep-alive> -->
+    </keep-alive>
     <main>
       <AppHero class="hero" />
       <AppAdvantages class="observable" />
@@ -79,10 +79,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.hero {
-  margin-top: 120px;
-}
-
 .observable {
   opacity: 0;
   transform: translateY(50px);

@@ -3,11 +3,6 @@
   background-color: var(--color-background-4);
   padding: 120px 80px;
   border-radius: 70px;
-
-  /* Анимация */
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUp 1s ease-out forwards;
 }
 
 .hero--head {

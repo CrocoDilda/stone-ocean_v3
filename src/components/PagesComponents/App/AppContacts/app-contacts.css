@@ -78,3 +78,17 @@
     justify-self: center;
   }
 }
+
+@media (screen) {
+  .contacts--link {
+    &:hover {
+      & .contacts--icon {
+        fill: var(--color-background-3);
+      }
+
+      & .contacts--text {
+        color: var(--color-text-2);
+      }
+    }
+  }
+}

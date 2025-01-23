@@ -72,7 +72,7 @@ onUnmounted(() => {
       <button @click="toggleMenu" class="header--cross">
         <IconCross class="header--cross-icon" />
       </button>
-      <nav>
+      <!-- <nav>
         <ul class="header--list">
           <li>
             <a
@@ -116,11 +116,11 @@ onUnmounted(() => {
         class="header--button"
         text="Рассчитать стоимость"
         :url="'/page'"
-      />
+      /> -->
     </div>
-    <button v-show="!menuIsOpen" @click="toggleMenu" class="header--burger">
+    <!-- <button v-show="!menuIsOpen" @click="toggleMenu" class="header--burger">
       <IconBurger class="header--burger-icon" />
-    </button>
+    </button> -->
   </header>
 </template>
 

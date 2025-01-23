@@ -21,26 +21,32 @@ import MainLogo from "@/components/icons/MainLogo.vue";
           <span class="contacts--text text">+7 (989) 261-95-56 - Сергей</span>
         </a>
       </li>
+
       <li class="contacts--item">
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="https://t.me/Roman_acryl"
+          href="https://t.me/StoneOceanAcryl"
           class="contacts--link"
         >
           <IconTg class="contacts--icon" />
-          <span class="contacts--text text text">https://t.me/Roman_acryl</span>
+          <span class="contacts--text text text"
+            >https://t.me/StoneOceanAcryl</span
+          >
         </a>
       </li>
+
       <li class="contacts--item">
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="mailto:stone-ocean-acrylic@yandex.ru"
+          href="https://t.me/StoneOceanLive"
           class="contacts--link"
         >
-          <IconMail class="contacts--icon" />
-          <span class="contacts--text text">stone-ocean-acrylic@yandex.ru</span>
+          <IconTg class="contacts--icon" />
+          <span class="contacts--text text text"
+            >Тг канал: https://t.me/StoneOceanLive</span
+          >
         </a>
       </li>
 
@@ -53,6 +59,18 @@ import MainLogo from "@/components/icons/MainLogo.vue";
         >
           <IconWhatsapp class="contacts--icon" />
           <span class="contacts--text text">https://wa.me/+79892619556</span>
+        </a>
+      </li>
+
+      <li class="contacts--item">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="mailto:stone-ocean-acrylic@yandex.ru"
+          class="contacts--link"
+        >
+          <IconMail class="contacts--icon" />
+          <span class="contacts--text text">stone-ocean-acrylic@yandex.ru</span>
         </a>
       </li>
     </ul>
