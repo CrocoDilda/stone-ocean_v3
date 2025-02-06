@@ -2,11 +2,37 @@
 import SampleItem from "@/components/SampleItem/SampleItem.vue";
 import ButtonControl from "@/components/control/ButtonControl.vue";
 
-import { SAMPLES } from "./app-samples";
-
+import { ref, onMounted } from "vue";
+import axios from "axios";
 import { useManufacturersStore } from "@/store/manufacturers.ts";
+import { useApiUrl } from "@/store/url";
 
 const { manufacturers } = useManufacturersStore();
+const { API_URL } = useApiUrl();
+
+console.log(API_URL);
+const data = ref([]);
+const isLoading = ref(false);
+const errorMessage = ref("");
+
+async function getData() {
+  if (isLoading.value) return; // Предотвращаем повторный вызов
+  isLoading.value = true;
+  errorMessage.value = "";
+
+  try {
+    const response = await axios.get(`${API_URL}/stones/random?q=8`);
+    data.value = response.data;
+  } catch (error) {
+    console.error("Ошибка при загрузке данных:", error);
+    errorMessage.value =
+      error instanceof Error ? error.message : "Неизвестная ошибка";
+  } finally {
+    isLoading.value = false;
+  }
+}
+
+onMounted(getData);
 </script>
 
 <template>
@@ -33,13 +59,12 @@ const { manufacturers } = useManufacturersStore();
     </div>
     <ul class="samples--list-colors">
       <SampleItem
-        v-for="(item, index) in SAMPLES"
-        :key="index"
+        v-for="item in data"
+        :key="item.id"
         :name="item.name"
-        :image="item.image"
-        :color="item.color"
-        :id="item.id"
-        :partner="item.manufacturers"
+        :image="item.main_image"
+        :article="item.article"
+        :partner="item.manufacturer"
         class="samples--item-colors"
       />
     </ul>

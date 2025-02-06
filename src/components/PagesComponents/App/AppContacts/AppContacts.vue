@@ -14,11 +14,11 @@ import MainLogo from "@/components/icons/MainLogo.vue";
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="tel:+79892619556"
+          href="tel:88005553535"
           class="contacts--link"
         >
           <IconCall class="contacts--icon" />
-          <span class="contacts--text text">+7 (989) 261-95-56 - Сергей</span>
+          <span class="contacts--text text">+7 (800) 555-35-35</span>
         </a>
       </li>
 
@@ -30,9 +30,7 @@ import MainLogo from "@/components/icons/MainLogo.vue";
           class="contacts--link"
         >
           <IconTg class="contacts--icon" />
-          <span class="contacts--text text text"
-            >https://t.me/StoneOceanAcryl</span
-          >
+          <span class="contacts--text text text">Написать нам в тг</span>
         </a>
       </li>
 
@@ -44,9 +42,7 @@ import MainLogo from "@/components/icons/MainLogo.vue";
           class="contacts--link"
         >
           <IconTg class="contacts--icon" />
-          <span class="contacts--text text text"
-            >Тг канал: https://t.me/StoneOceanLive</span
-          >
+          <span class="contacts--text text text">Наш тг канал</span>
         </a>
       </li>
 
@@ -54,11 +50,11 @@ import MainLogo from "@/components/icons/MainLogo.vue";
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="https://wa.me/+79892619556"
+          href="https://wa.me/88005553535"
           class="contacts--link"
         >
           <IconWhatsapp class="contacts--icon" />
-          <span class="contacts--text text">https://wa.me/+79892619556</span>
+          <span class="contacts--text text">https://wa.me/88005553535</span>
         </a>
       </li>
 

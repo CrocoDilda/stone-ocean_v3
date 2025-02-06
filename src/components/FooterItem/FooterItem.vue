@@ -54,9 +54,7 @@ import IconGithub from "../icons/IconGithub.vue";
       </div>
     </div>
     <div class="author">
-      <p class="author--text text">
-        Разработка и поддержка: <span class="author--acent">CrocoDilda</span>
-      </p>
+      <p class="author--text text">Контакты разработчика:</p>
       <a
         rel="noopener noreferrer"
         target="_blank"
